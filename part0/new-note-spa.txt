@@ -1,0 +1,14 @@
+note over browser:
+browser adds the new note to
+the list and redraws the notes
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa \nreq body: {content: "My new note", date: "2020-09-05"}
+
+note over server:
+server receives the request body
+and stores the input note data
+end note
+
+server-->browser: {"message":"note created"}
+
